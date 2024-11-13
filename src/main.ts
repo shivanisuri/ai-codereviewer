@@ -124,6 +124,7 @@ async function getAIResponse(prompt: string): Promise<Array<{
   };
 
   try {
+    console.log("Waiting for OpenAI");
     await new Promise(f => setTimeout(f, 5000));
     const response = await openai.chat.completions.create({
       ...queryConfig,
