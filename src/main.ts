@@ -143,7 +143,7 @@ async function getAIResponse(prompt: string): Promise<Array<{
     const res = response.choices[0].message?.content?.trim() || "{}";
     return JSON.parse(res).reviews;
   } catch (error) {
-    console.error("Error:", error);
+    console.error("waiting 1 Error:", error);
     return null;
   }
 }
@@ -246,6 +246,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error("Error:", error);
+  console.error("2: Error:", error);
   process.exit(1);
 });
